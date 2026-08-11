@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Madhav Mohan — AI / GenAI / LLM Platform Engineer</title>
+<meta name="description" content="AI/GenAI/LLM Platform Engineer building production LLM infrastructure — self-hosted inference, event-driven RAG, and multi-agent systems at scale." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  :root{
+    --bg:        #0E1E33;
+    --bg-alt:    #10263F;
+    --panel:     #16304F;
+    --line:      #3A5A78;
+    --line-dim:  rgba(127,168,201,0.18);
+    --text:      #EAF1F8;
+    --text-dim:  #93A9C2;
+    --amber:     #E0983F;
+    --amber-dim: rgba(224,152,63,0.14);
+    --teal:      #55B99A;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    background-image:
+      linear-gradient(var(--line-dim) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-dim) 1px, transparent 1px);
+    background-size:44px 44px;
+  }
+  h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .corner{position:relative;}
+  .corner::before,.corner::after{
+    content:'';position:absolute;width:14px;height:14px;
+    border-color:var(--amber);opacity:.85;
+  }
+  .corner::before{top:-1px;left:-1px;border-top:2px solid;border-left:2px solid;}
+  .corner::after{bottom:-1px;right:-1px;border-bottom:2px solid;border-right:2px solid;}
+  .panel{background:var(--panel);border:1px solid var(--line);}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    letter-spacing:.12em;text-transform:uppercase;
+    color:var(--amber);font-size:.72rem;
+  }
+  .btn-primary{
+    background:var(--amber);color:#14233B;font-weight:600;
+    padding:.7rem 1.4rem;border-radius:2px;transition:opacity .15s;
+  }
+  .btn-primary:hover{opacity:.88;}
+  .btn-ghost{
+    border:1px solid var(--line);color:var(--text);
+    padding:.7rem 1.4rem;border-radius:2px;transition:border-color .15s;
+  }
+  .btn-ghost:hover{border-color:var(--amber);}
+  a.navlink{color:var(--text-dim);transition:color .15s;}
+  a.navlink:hover{color:var(--amber);}
+  .tag{
+    font-family:'JetBrains Mono',monospace;font-size:.68rem;
+    color:var(--text-dim);border:1px solid var(--line);
+    padding:.15rem .5rem;border-radius:2px;
+  }
+  ::selection{background:var(--amber);color:#14233B;}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- NAV -->
+<header class="sticky top-0 z-50" style="background:rgba(14,30,51,0.88);backdrop-filter:blur(6px);border-bottom:1px solid var(--line-dim);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#top" class="display font-semibold text-lg tracking-tight">Madhav Mohan</a>
+    <nav class="flex items-center gap-3 sm:gap-8 text-xs sm:text-sm mono overflow-x-auto">
+      <a href="#about" class="navlink">about</a>
+      <a href="#projects" class="navlink">projects</a>
+      <a href="#experience" class="navlink">experience</a>
+      <a href="#skills" class="navlink">skills</a>
+      <a href="#contact" class="navlink">contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="max-w-6xl mx-auto px-6 pt-16 pb-20">
+  <p class="eyebrow mb-4">AI &middot; GenAI &middot; LLM &middot; AI Platform Engineer</p>
+  <h1 class="display text-4xl sm:text-5xl font-bold leading-tight max-w-3xl">
+    I build the infrastructure that takes GenAI systems from notebooks to production.
+  </h1>
+  <p class="mt-6 text-lg max-w-2xl" style="color:var(--text-dim)">
+    3.5 years shipping self-hosted LLM inference, event-driven RAG pipelines, and multi-agent
+    orchestration &mdash; at a scale of 12M+ users. MSc, University College Dublin.
+    Netherlands HSM-visa eligible.
+  </p>
+  <div class="mt-8 flex flex-wrap gap-4">
+    <a href="#projects" class="btn-primary">View Projects</a>
+    <a href="#contact" class="btn-ghost">Get in Touch</a>
+    <a href="MadhavMohan_CV.pdf" class="btn-ghost mono text-sm">&darr; Resume</a>
+  </div>
+
+  <!-- status panel -->
+  <div class="mt-14 corner panel p-5 sm:p-6">
+    <p class="eyebrow mb-4">// production metrics — verified</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+      <div>
+        <p class="mono text-2xl sm:text-3xl font-semibold" style="color:var(--amber)">&lt;15ms</p>
+        <p class="text-xs mt-1" style="color:var(--text-dim)">P99 latency &middot; 12M+ users</p>
+      </div>
+      <div>
+        <p class="mono text-2xl sm:text-3xl font-semibold" style="color:var(--amber)">$3K/mo</p>
+        <p class="text-xs mt-1" style="color:var(--text-dim)">vendor cost eliminated</p>
+      </div>
+      <div>
+        <p class="mono text-2xl sm:text-3xl font-semibold" style="color:var(--amber)">65%&rarr;98%</p>
+        <p class="text-xs mt-1" style="color:var(--text-dim)">JSON schema compliance</p>
+      </div>
+      <div>
+        <p class="mono text-2xl sm:text-3xl font-semibold" style="color:var(--amber)">5hr&rarr;2min</p>
+        <p class="text-xs mt-1" style="color:var(--text-dim)">environment provisioning</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-6xl mx-auto px-6 py-16 border-t" style="border-color:var(--line-dim)">
+  <div class="grid sm:grid-cols-3 gap-10">
+    <div>
+      <p class="eyebrow mb-3">01 &middot; about</p>
+      <h2 class="display text-2xl font-semibold">Background</h2>
+    </div>
+    <div class="sm:col-span-2 space-y-4" style="color:var(--text-dim)">
+      <p>
+        I'm an AI Platform Engineer based in Chennai, currently building production GenAI systems at
+        SportsMechanics &mdash; self-hosted LLM inference, real-time RAG search, and multi-agent pipelines
+        serving millions of users.
+      </p>
+      <p>
+        Before that, I built agentic AI systems at ShortCastle Technologies and completed an AI research
+        internship on a Microsoft academic-industry collaboration at University College Dublin, where I
+        also earned my MSc in Computer Science. My work sits at the intersection of applied ML and
+        infrastructure: I care as much about SLOs, autoscaling, and cost as I do about model quality.
+      </p>
+      <p>
+        Currently exploring AI/GenAI/LLM Engineering roles in the Netherlands (Highly Skilled Migrant
+        visa eligible) and open to relocation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="max-w-6xl mx-auto px-6 py-16 border-t" style="border-color:var(--line-dim)">
+  <p class="eyebrow mb-3">02 &middot; projects</p>
+  <h2 class="display text-2xl font-semibold mb-10">Featured Work</h2>
+
+  <div class="grid sm:grid-cols-2 gap-6">
+
+    <div class="corner panel p-6">
+      <h3 class="font-semibold text-lg mb-1">Distributed RAG Pipeline</h3>
+      <p class="text-xs mono mb-3" style="color:var(--amber)">event-driven ingestion · KEDA autoscaling</p>
+      <p class="text-sm mb-4" style="color:var(--text-dim)">
+        Kafka &rarr; KEDA-autoscaled Kubernetes workers &rarr; Qdrant, with semantic chunking and a
+        dead-letter queue for fault tolerance. The blueprint behind the 12M-user, sub-15ms production
+        pipeline.
+      </p>
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        <span class="tag">Kafka</span><span class="tag">Kubernetes</span><span class="tag">KEDA</span><span class="tag">Qdrant</span><span class="tag">Terraform</span>
+      </div>
+      <a href="https://github.com/maddy333/kafka-keda-rag-pipeline" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/kafka-keda-rag-pipeline &rarr;</a>
+    </div>
+
+    <div class="corner panel p-6">
+      <h3 class="font-semibold text-lg mb-1">GenAI Gateway</h3>
+      <p class="text-xs mono mb-3" style="color:var(--amber)">multi-region · active-active LLM routing</p>
+      <p class="text-sm mb-4" style="color:var(--text-dim)">
+        Semantic caching, per-tenant FinOps budget enforcement, and circuit-breaker failover between
+        self-hosted vLLM and OpenAI. The blueprint behind the $3K/month cost-elimination result.
+      </p>
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        <span class="tag">FastAPI</span><span class="tag">Redis</span><span class="tag">OpenTelemetry</span><span class="tag">Prometheus</span>
+      </div>
+      <a href="https://github.com/maddy333/gateway" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/gateway &rarr;</a>
+    </div>
+
+    <div class="corner panel p-6">
+      <h3 class="font-semibold text-lg mb-1">Agentic AI</h3>
+      <p class="text-xs mono mb-3" style="color:var(--amber)">multi-agent control plane · HITL</p>
+      <p class="text-sm mb-4" style="color:var(--text-dim)">
+        Autonomous agent orchestrator on Temporal.io for durable, crash-resilient execution, with
+        LangGraph state-machine agents and async human-in-the-loop safety overrides.
+      </p>
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        <span class="tag">Temporal.io</span><span class="tag">LangGraph</span><span class="tag">PostgreSQL</span>
+      </div>
+      <a href="https://github.com/maddy333/agentic_AI" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/agentic_AI &rarr;</a>
+    </div>
+
+    <div class="corner panel p-6">
+      <h3 class="font-semibold text-lg mb-1">Fencing-LLM</h3>
+      <p class="text-xs mono mb-3" style="color:var(--amber)">QLoRA fine-tuning · edge inference</p>
+      <p class="text-sm mb-4" style="color:var(--text-dim)">
+        Fine-tuned Llama via 4-bit QLoRA for edge deployment: JSON compliance 65%&rarr;98%, VRAM
+        5.8GB&rarr;1.6GB, throughput 22&rarr;45 tok/s. Tracked in MLflow.
+      </p>
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        <span class="tag">QLoRA</span><span class="tag">PEFT</span><span class="tag">CUDA</span><span class="tag">MLflow</span>
+      </div>
+      <a href="https://github.com/maddy333/fencingllm" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/fencingllm &rarr;</a>
+    </div>
+
+    <div class="corner panel p-6">
+      <h3 class="font-semibold text-lg mb-1">Vector</h3>
+      <p class="text-xs mono mb-3" style="color:var(--amber)">real-time retrieval engine</p>
+      <p class="text-sm mb-4" style="color:var(--text-dim)">
+        Zero-downtime CDC ingestion (Debezium &rarr; Kafka) feeding hybrid dense + BM25 search across
+        Qdrant and OpenSearch, with reciprocal rank fusion and live embedding-model migration.
+      </p>
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        <span class="tag">Debezium</span><span class="tag">Qdrant</span><span class="tag">OpenSearch</span><span class="tag">asyncpg</span>
+      </div>
+      <a href="https://github.com/maddy333/vector" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/vector &rarr;</a>
+    </div>
+
+    <div class="corner panel p-6">
+      <h3 class="font-semibold text-lg mb-1">Terraform AI Platform</h3>
+      <p class="text-xs mono mb-3" style="color:var(--amber)">production infrastructure blueprint</p>
+      <p class="text-sm mb-4" style="color:var(--text-dim)">
+        Modular Terraform IaC for AI workloads on AWS &mdash; EKS, RDS, Redis, ALB, zero-trust IAM,
+        and multi-tenant environment separation.
+      </p>
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        <span class="tag">Terraform</span><span class="tag">AWS EKS</span><span class="tag">IAM</span>
+      </div>
+      <a href="https://github.com/maddy333/terraform-aws-ai-platform" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/terraform-aws-ai-platform &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="max-w-6xl mx-auto px-6 py-16 border-t" style="border-color:var(--line-dim)">
+  <p class="eyebrow mb-3">03 &middot; experience</p>
+  <h2 class="display text-2xl font-semibold mb-10">Timeline</h2>
+
+  <div class="space-y-8">
+    <div class="grid sm:grid-cols-4 gap-2 sm:gap-6">
+      <p class="mono text-sm" style="color:var(--text-dim)">Oct 2025 &mdash; Present</p>
+      <div class="sm:col-span-3">
+        <p class="font-semibold">AI Platform Engineer <span style="color:var(--text-dim);font-weight:400">&middot; SportsMechanics India</span></p>
+        <p class="text-sm mt-1" style="color:var(--text-dim)">Self-hosted LLM inference at sub-15ms P99 for 12M+ users; Terraform/Helm IaC cutting provisioning from 5hrs to under 2min; RAG-based semantic video search at 96% accuracy.</p>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-4 gap-2 sm:gap-6">
+      <p class="mono text-sm" style="color:var(--text-dim)">Jan 2024 &mdash; Sep 2025</p>
+      <div class="sm:col-span-3">
+        <p class="font-semibold">GenAI Engineer <span style="color:var(--text-dim);font-weight:400">&middot; ShortCastle Technologies</span></p>
+        <p class="text-sm mt-1" style="color:var(--text-dim)">Production agentic AI system over 500K+ chess positions; end-to-end MLOps platform sustaining 99.9% uptime over 18 months.</p>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-4 gap-2 sm:gap-6">
+      <p class="mono text-sm" style="color:var(--text-dim)">Jun 2023 &mdash; Aug 2023</p>
+      <div class="sm:col-span-3">
+        <p class="font-semibold">AI Research Intern <span style="color:var(--text-dim);font-weight:400">&middot; Microsoft Academic-Industry Project, UCD</span></p>
+        <p class="text-sm mt-1" style="color:var(--text-dim)">Fraud-detection ML system (BiLSTM + BERT) achieving 98% accuracy on the WelFake benchmark.</p>
+      </div>
+    </div>
+    <div class="grid sm:grid-cols-4 gap-2 sm:gap-6">
+      <p class="mono text-sm" style="color:var(--text-dim)">May 2021 &mdash; Jul 2022</p>
+      <div class="sm:col-span-3">
+        <p class="font-semibold">Associate Data Engineer <span style="color:var(--text-dim);font-weight:400">&middot; Guardian Life Insurance</span></p>
+        <p class="text-sm mt-1" style="color:var(--text-dim)">Azure Data Factory + Databricks ETL processing 200GB/day; 80% throughput improvement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="max-w-6xl mx-auto px-6 py-16 border-t" style="border-color:var(--line-dim)">
+  <p class="eyebrow mb-3">04 &middot; skills</p>
+  <h2 class="display text-2xl font-semibold mb-10">Stack</h2>
+
+  <div class="grid sm:grid-cols-2 gap-8">
+    <div>
+      <p class="mono text-sm mb-2" style="color:var(--amber)">LLM &amp; GenAI</p>
+      <p class="text-sm" style="color:var(--text-dim)">LangChain, LangGraph, Agentic AI, RAG (Hybrid &amp; Semantic), QLoRA/LoRA/PEFT, Quantization (NF4), vLLM, Ollama, OpenAI API, Anthropic API</p>
+    </div>
+    <div>
+      <p class="mono text-sm mb-2" style="color:var(--amber)">LLMOps &amp; MLOps</p>
+      <p class="text-sm" style="color:var(--text-dim)">MLflow, Model Registry, RAGAS, LLM Guardrails, CI/CD, CUDA, PyTorch, HuggingFace, Asyncio</p>
+    </div>
+    <div>
+      <p class="mono text-sm mb-2" style="color:var(--amber)">Retrieval &amp; Vector Store</p>
+      <p class="text-sm" style="color:var(--text-dim)">Qdrant, OpenSearch, Pinecone, Milvus, FAISS, ChromaDB, BM25, Reciprocal Rank Fusion</p>
+    </div>
+    <div>
+      <p class="mono text-sm mb-2" style="color:var(--amber)">Platform &amp; Infrastructure</p>
+      <p class="text-sm" style="color:var(--text-dim)">AWS (EKS, EC2, S3, IAM), Terraform, Kubernetes (KEDA/HPA), Helm, Kafka, Temporal.io, Redis, Prometheus, Grafana, OpenTelemetry, FastAPI</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="max-w-6xl mx-auto px-6 py-20 border-t" style="border-color:var(--line-dim)">
+  <div class="corner panel p-8 sm:p-12 text-center max-w-2xl mx-auto">
+    <p class="eyebrow mb-3">05 &middot; contact</p>
+    <h2 class="display text-2xl sm:text-3xl font-semibold mb-4">Let's build something.</h2>
+    <p class="mb-8" style="color:var(--text-dim)">
+      Open to AI / GenAI / LLM / AI Platform Engineer roles &mdash; Netherlands (HSM-visa eligible),
+      Chennai, Bangalore, or remote.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="mailto:madhavm60@gmail.com" class="btn-primary">Email Me</a>
+      <a href="https://linkedin.com/in/mohan60" class="btn-ghost">LinkedIn</a>
+      <a href="https://github.com/maddy333" class="btn-ghost">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer class="max-w-6xl mx-auto px-6 py-8 text-center text-xs mono border-t" style="border-color:var(--line-dim);color:var(--text-dim)">
+  &copy; 2026 Madhav Mohan &middot; built with Tailwind, deployed on GitHub Pages
+</footer>
+
+</body>
+</html>
