@@ -51,11 +51,13 @@
   .btn-primary{
     background:var(--amber);color:#14233B;font-weight:600;
     padding:.7rem 1.4rem;border-radius:2px;transition:opacity .15s;
+    display:inline-block;
   }
   .btn-primary:hover{opacity:.88;}
   .btn-ghost{
     border:1px solid var(--line);color:var(--text);
     padding:.7rem 1.4rem;border-radius:2px;transition:border-color .15s;
+    display:inline-block;
   }
   .btn-ghost:hover{border-color:var(--amber);}
   a.navlink{color:var(--text-dim);transition:color .15s;}
@@ -92,7 +94,7 @@
     I build the infrastructure that takes GenAI systems from notebooks to production.
   </h1>
   <p class="mt-6 text-lg max-w-2xl" style="color:var(--text-dim)">
-    3.5 years shipping self-hosted LLM inference, event-driven RAG pipelines, and multi-agent
+    3.5+ years shipping self-hosted LLM inference, event-driven RAG pipelines, and multi-agent
     orchestration &mdash; at a scale of 12M+ users. MSc, University College Dublin.
     Netherlands HSM-visa eligible.
   </p>
@@ -160,83 +162,107 @@
 
   <div class="grid sm:grid-cols-2 gap-6">
 
-    <div class="corner panel p-6">
-      <h3 class="font-semibold text-lg mb-1">Distributed RAG Pipeline</h3>
-      <p class="text-xs mono mb-3" style="color:var(--amber)">event-driven ingestion · KEDA autoscaling</p>
-      <p class="text-sm mb-4" style="color:var(--text-dim)">
-        Kafka &rarr; KEDA-autoscaled Kubernetes workers &rarr; Qdrant, with semantic chunking and a
-        dead-letter queue for fault tolerance. The blueprint behind the 12M-user, sub-15ms production
-        pipeline.
-      </p>
-      <div class="flex flex-wrap gap-1.5 mb-4">
-        <span class="tag">Kafka</span><span class="tag">Kubernetes</span><span class="tag">KEDA</span><span class="tag">Qdrant</span><span class="tag">Terraform</span>
+    <div class="corner panel p-6 flex flex-col justify-between">
+      <div>
+        <h3 class="font-semibold text-lg mb-1">Distributed RAG Pipeline</h3>
+        <p class="text-xs mono mb-3" style="color:var(--amber)">event-driven ingestion &middot; KEDA autoscaling</p>
+        <p class="text-sm mb-4" style="color:var(--text-dim)">
+          Kafka &rarr; KEDA-autoscaled Kubernetes workers &rarr; Qdrant, with semantic chunking and a
+          dead-letter queue for fault tolerance. The blueprint behind the 12M-user, sub-15ms production
+          pipeline.
+        </p>
       </div>
-      <a href="https://github.com/maddy333/kafka-keda-rag-pipeline" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/kafka-keda-rag-pipeline &rarr;</a>
+      <div>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="tag">Kafka</span><span class="tag">Kubernetes</span><span class="tag">KEDA</span><span class="tag">Qdrant</span><span class="tag">Terraform</span>
+        </div>
+        <a href="https://github.com/maddy333/kafka-keda-rag-pipeline" target="_blank" rel="noopener noreferrer" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/kafka-keda-rag-pipeline &rarr;</a>
+      </div>
     </div>
 
-    <div class="corner panel p-6">
-      <h3 class="font-semibold text-lg mb-1">GenAI Gateway</h3>
-      <p class="text-xs mono mb-3" style="color:var(--amber)">multi-region · active-active LLM routing</p>
-      <p class="text-sm mb-4" style="color:var(--text-dim)">
-        Semantic caching, per-tenant FinOps budget enforcement, and circuit-breaker failover between
-        self-hosted vLLM and OpenAI. The blueprint behind the $3K/month cost-elimination result.
-      </p>
-      <div class="flex flex-wrap gap-1.5 mb-4">
-        <span class="tag">FastAPI</span><span class="tag">Redis</span><span class="tag">OpenTelemetry</span><span class="tag">Prometheus</span>
+    <div class="corner panel p-6 flex flex-col justify-between">
+      <div>
+        <h3 class="font-semibold text-lg mb-1">GenAI Gateway</h3>
+        <p class="text-xs mono mb-3" style="color:var(--amber)">multi-region &middot; active-active LLM routing</p>
+        <p class="text-sm mb-4" style="color:var(--text-dim)">
+          Semantic caching, per-tenant FinOps budget enforcement, and circuit-breaker failover between
+          self-hosted vLLM and OpenAI. The blueprint behind the $3K/month cost-elimination result.
+        </p>
       </div>
-      <a href="https://github.com/maddy333/gateway" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/gateway &rarr;</a>
+      <div>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="tag">FastAPI</span><span class="tag">Redis</span><span class="tag">OpenTelemetry</span><span class="tag">Prometheus</span>
+        </div>
+        <a href="https://github.com/maddy333/gateway" target="_blank" rel="noopener noreferrer" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/gateway &rarr;</a>
+      </div>
     </div>
 
-    <div class="corner panel p-6">
-      <h3 class="font-semibold text-lg mb-1">Agentic AI</h3>
-      <p class="text-xs mono mb-3" style="color:var(--amber)">multi-agent control plane · HITL</p>
-      <p class="text-sm mb-4" style="color:var(--text-dim)">
-        Autonomous agent orchestrator on Temporal.io for durable, crash-resilient execution, with
-        LangGraph state-machine agents and async human-in-the-loop safety overrides.
-      </p>
-      <div class="flex flex-wrap gap-1.5 mb-4">
-        <span class="tag">Temporal.io</span><span class="tag">LangGraph</span><span class="tag">PostgreSQL</span>
+    <div class="corner panel p-6 flex flex-col justify-between">
+      <div>
+        <h3 class="font-semibold text-lg mb-1">Agentic AI</h3>
+        <p class="text-xs mono mb-3" style="color:var(--amber)">multi-agent control plane &middot; HITL</p>
+        <p class="text-sm mb-4" style="color:var(--text-dim)">
+          Autonomous agent orchestrator on Temporal.io for durable, crash-resilient execution, with
+          LangGraph state-machine agents and async human-in-the-loop safety overrides.
+        </p>
       </div>
-      <a href="https://github.com/maddy333/agentic_AI" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/agentic_AI &rarr;</a>
+      <div>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="tag">Temporal.io</span><span class="tag">LangGraph</span><span class="tag">PostgreSQL</span>
+        </div>
+        <a href="https://github.com/maddy333/agentic_AI" target="_blank" rel="noopener noreferrer" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/agentic_AI &rarr;</a>
+      </div>
     </div>
 
-    <div class="corner panel p-6">
-      <h3 class="font-semibold text-lg mb-1">Fencing-LLM</h3>
-      <p class="text-xs mono mb-3" style="color:var(--amber)">QLoRA fine-tuning · edge inference</p>
-      <p class="text-sm mb-4" style="color:var(--text-dim)">
-        Fine-tuned Llama via 4-bit QLoRA for edge deployment: JSON compliance 65%&rarr;98%, VRAM
-        5.8GB&rarr;1.6GB, throughput 22&rarr;45 tok/s. Tracked in MLflow.
-      </p>
-      <div class="flex flex-wrap gap-1.5 mb-4">
-        <span class="tag">QLoRA</span><span class="tag">PEFT</span><span class="tag">CUDA</span><span class="tag">MLflow</span>
+    <div class="corner panel p-6 flex flex-col justify-between">
+      <div>
+        <h3 class="font-semibold text-lg mb-1">Fencing-LLM</h3>
+        <p class="text-xs mono mb-3" style="color:var(--amber)">QLoRA fine-tuning &middot; edge inference</p>
+        <p class="text-sm mb-4" style="color:var(--text-dim)">
+          Fine-tuned Llama via 4-bit QLoRA for edge deployment: JSON compliance 65%&rarr;98%, VRAM
+          5.8GB&rarr;1.6GB, throughput 22&rarr;45 tok/s. Tracked in MLflow.
+        </p>
       </div>
-      <a href="https://github.com/maddy333/fencingllm" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/fencingllm &rarr;</a>
+      <div>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="tag">QLoRA</span><span class="tag">PEFT</span><span class="tag">CUDA</span><span class="tag">MLflow</span>
+        </div>
+        <a href="https://github.com/maddy333/fencingllm" target="_blank" rel="noopener noreferrer" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/fencingllm &rarr;</a>
+      </div>
     </div>
 
-    <div class="corner panel p-6">
-      <h3 class="font-semibold text-lg mb-1">Vector</h3>
-      <p class="text-xs mono mb-3" style="color:var(--amber)">real-time retrieval engine</p>
-      <p class="text-sm mb-4" style="color:var(--text-dim)">
-        Zero-downtime CDC ingestion (Debezium &rarr; Kafka) feeding hybrid dense + BM25 search across
-        Qdrant and OpenSearch, with reciprocal rank fusion and live embedding-model migration.
-      </p>
-      <div class="flex flex-wrap gap-1.5 mb-4">
-        <span class="tag">Debezium</span><span class="tag">Qdrant</span><span class="tag">OpenSearch</span><span class="tag">asyncpg</span>
+    <div class="corner panel p-6 flex flex-col justify-between">
+      <div>
+        <h3 class="font-semibold text-lg mb-1">Vector</h3>
+        <p class="text-xs mono mb-3" style="color:var(--amber)">real-time retrieval engine</p>
+        <p class="text-sm mb-4" style="color:var(--text-dim)">
+          Zero-downtime CDC ingestion (Debezium &rarr; Kafka) feeding hybrid dense + BM25 search across
+          Qdrant and OpenSearch, with reciprocal rank fusion and live embedding-model migration.
+        </p>
       </div>
-      <a href="https://github.com/maddy333/vector" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/vector &rarr;</a>
+      <div>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="tag">Debezium</span><span class="tag">Qdrant</span><span class="tag">OpenSearch</span><span class="tag">asyncpg</span>
+        </div>
+        <a href="https://github.com/maddy333/vector" target="_blank" rel="noopener noreferrer" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/vector &rarr;</a>
+      </div>
     </div>
 
-    <div class="corner panel p-6">
-      <h3 class="font-semibold text-lg mb-1">Terraform AI Platform</h3>
-      <p class="text-xs mono mb-3" style="color:var(--amber)">production infrastructure blueprint</p>
-      <p class="text-sm mb-4" style="color:var(--text-dim)">
-        Modular Terraform IaC for AI workloads on AWS &mdash; EKS, RDS, Redis, ALB, zero-trust IAM,
-        and multi-tenant environment separation.
-      </p>
-      <div class="flex flex-wrap gap-1.5 mb-4">
-        <span class="tag">Terraform</span><span class="tag">AWS EKS</span><span class="tag">IAM</span>
+    <div class="corner panel p-6 flex flex-col justify-between">
+      <div>
+        <h3 class="font-semibold text-lg mb-1">Terraform AI Platform</h3>
+        <p class="text-xs mono mb-3" style="color:var(--amber)">production infrastructure blueprint</p>
+        <p class="text-sm mb-4" style="color:var(--text-dim)">
+          Modular Terraform IaC for AI workloads on AWS &mdash; EKS, RDS, Redis, ALB, zero-trust IAM,
+          and multi-tenant environment separation.
+        </p>
       </div>
-      <a href="https://github.com/maddy333/terraform-aws-ai-platform" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/terraform-aws-ai-platform &rarr;</a>
+      <div>
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          <span class="tag">Terraform</span><span class="tag">AWS EKS</span><span class="tag">IAM</span>
+        </div>
+        <a href="https://github.com/maddy333/terraform-aws-ai-platform" target="_blank" rel="noopener noreferrer" class="text-sm mono" style="color:var(--teal)">github.com/maddy333/terraform-aws-ai-platform &rarr;</a>
+      </div>
     </div>
 
   </div>
@@ -315,8 +341,8 @@
     </p>
     <div class="flex flex-wrap justify-center gap-4">
       <a href="mailto:madhavm60@gmail.com" class="btn-primary">Email Me</a>
-      <a href="https://linkedin.com/in/mohan60" class="btn-ghost">LinkedIn</a>
-      <a href="https://github.com/maddy333" class="btn-ghost">GitHub</a>
+      <a href="https://linkedin.com/in/mohan60" target="_blank" rel="noopener noreferrer" class="btn-ghost">LinkedIn</a>
+      <a href="https://github.com/maddy333" target="_blank" rel="noopener noreferrer" class="btn-ghost">GitHub</a>
     </div>
   </div>
 </section>
